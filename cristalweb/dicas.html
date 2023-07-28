@@ -263,8 +263,8 @@
         .game-window-larguer-2 {
             width: 350px;
             height: 150px;
-            background-color: #9600bb;
-            border: 2px solid #fff;
+            background-color: #ffffff;
+            border: 2px solid #8c00a8;
             border-radius: 5px;
             margin: 10px;
             padding: 10px;
@@ -310,6 +310,7 @@
             width: 350px;
             height: 130px;
             background-color: #77E100;
+            border-color:#8700a8;
             border-radius: 5px;
             margin: 10px;
             padding: 0px;
@@ -340,6 +341,20 @@
         .game-window-2:hover {
          transform: scale(1.10);
         }
+        
+        .section2 {
+            padding: 10px;
+            margin:1px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+    
+        .youtube-player {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    
 
         
         </style>
@@ -355,23 +370,12 @@
             <li><a href="home.html">Início</a></li>
             <li><a href="serviços.html" >Serviços</a></li>
             <li><a href="dicas.html">Dicas</a></li>
-            <li><a href="contatp.html">Contato</a></li>
+            <li><a href="contato.html">Contato</a></li>
           </ul>
         </header>
       </div>
 
      
-        .section3 {
-            padding: 20px;
-            width: 80rem;
-            text-align: center;
-            color: #fff;
-        }
-    
-        .youtube-player {
-            max-width: 800px;
-            margin: 0 auto;
-        }
  
     
       <nav class="nav">
@@ -395,14 +399,9 @@
       <section class="section2">
 
         <div class="game-window-2">
-            <img src="img/dica1.jpg" alt="Nome do Jogo 2">
+            <h1 id="typed-text"></h1>
         </div>
-        <div class="game-window-2">
-            <img src="img/dica2.jpg" alt="Nome do Jogo 2">
-        </div>
-        <div class="game-window-2">
-            <img src="img/dica3.jpg" alt="Nome do Jogo 2">
-        </div>
+       
         
         </section>
 
@@ -425,9 +424,46 @@
 
 
         <footer>
-            &copy; 2023 PlayStation. Todos os direitos reservados.
+            &copy; Lavanderia Cristal2023. Todos os direitos reservados.
         </footer>
         </body>
+
+        <script>
+            const words = ["#1 - Meça as roupas no Cesto medidas!", "#2 - Adicione as roupas na máquina escolhida!", "#3 - Realize o pagamento no Totem", "#4 - Clique em iniciar a lavagem!","#5 - Aguarde o processo de lavagem", "Repita o procedimento para secagem"]; // Adicione as palavras desejadas aqui
+     const typedTextElement = document.getElementById('typed-text');
+     const typingSpeed = 50; // Velocidade da animação (em milissegundos)
+     const pauseBetweenWords = 2500; // Pausa entre as palavras (em milissegundos)
+     
+     let wordIndex = 0;
+     let letterIndex = 0;
+     let isDeleting = false;
+     
+     function type() {
+       const currentWord = words[wordIndex];
+       const text = isDeleting
+         ? currentWord.substring(0, letterIndex - 1)
+         : currentWord.substring(0, letterIndex + 1);
+     
+       typedTextElement.innerHTML = text;
+       letterIndex += isDeleting ? -1 : 1;
+     
+       if (!isDeleting && letterIndex === currentWord.length) {
+         isDeleting = true;
+         setTimeout(() => {
+           isDeleting = false;
+           wordIndex = (wordIndex + 1) % words.length;
+           letterIndex = 0;
+           setTimeout(type, pauseBetweenWords);
+         }, pauseBetweenWords);
+       } else {
+         setTimeout(type, typingSpeed);
+       }
+     }
+     
+     document.addEventListener('DOMContentLoaded', () => {
+       setTimeout(type, pauseBetweenWords);
+     });
+         </script>
 
         <script>
             function playVideo() {
