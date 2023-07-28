@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conecte-se Conosco</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.header {
+            background-color: #ffffff;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .logo {
+        width: 100px;
+        margin: 1px;
+        }
+
+
+
+        /* menu icon */
+        #menuIcon{
+        width: 60px;
+        border-radius: 50%;
+        position: absolute;
+        top: 40px;
+        right: 20px;
+        cursor: pointer;
+        z-index: 100;
+        }
+
+        /* menu-box */
+        .menu-box{
+        width: 0;
+        height: 0;
+        background-color:	#8700a8;
+        position: fixed;
+        top: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        border-bottom-left-radius: 100%;
+        transition: width 0.5s, height 0.5s, border-radius 0.5s;
+        z-index: 1;
+        }
+
+        .menu-box.open-menu{
+        width: 100%;
+        height: 100vh;
+        border-bottom-left-radius: 0;
+        margin: 2px;
+        }
+
+        .menu-box.open-menu ul li{
+         opacity: 1;
+        transform: translateY(0);
+        transition: transform 1s, opacity 1s;
+        transition-delay: 0.5s;
+        }
+
+        /* ul and li in box */
+        .menu-box ul li{
+        list-style: none;
+        margin: 20px;
+        text-align: center;
+        opacity: 0;
+        transform: translateY(30px);
+        }
+
+        .menu-box ul li a{
+        display: inline-block;
+        text-decoration: none;
+        color: #fff;
+        font-size: 50px;
+        font-weight: 600;
+        position: relative;
+        transition: 0.5s, transform 0.5s;
+        }
+
+        .menu-box ul li a:hover{
+        color: rgb(51, 255, 0);
+        transform: translateY(-6px);
+        }
+
+       
+    
+        /* Seu estilo padrão para a classe "nav" */
+        nav {
+        background-color: #9600bb;
+        padding: 10px 0;
+        text-align: center;
+        }
+
+        nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        }
+
+        nav ul li {
+        display: inline-block;
+        }
+
+        nav ul li a {
+        color: #fff;
+        display: block;
+        padding: 10px 20px;
+        text-decoration: none;
+        transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+        background-color: #c600d8;
+        border-radius: 5px;
+        }
+
+        .active {
+        color: rgb(255, 255, 255);
+        background-color: #c600d8;
+        border-radius: 5px;
+        }
+
+main {
+    padding: 2rem;
+}
+
+.connect {
+    text-align: center;
+}
+
+.social-links {
+    margin-top: 1rem;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.dashboards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.dashboard {
+    width: 300px;
+    background-color: #f2f2f2;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.dashboard img {
+    max-width: 100%;
+}
+
+.dashboard h3 {
+    margin-top: 0.5rem;
+}
+
+.dashboard p {
+    font-size: 14px;
+    color: #666;
+}
+
+.dashboard a {
+    display: inline-block;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.dashboard a:hover {
+    background-color: #0056b3;
+}
+
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #333;
+    color: #fff;
+}
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <img class="logo" src="img/logo.png" alt="Logo">
+        <img src="img/48.png" id="menuIcon">
+        <div class="menu-box" id="menuBox">
+        <div class="background"></div>
+          <ul>
+            <li><a href="home.html">Início</a></li>
+            <li><a href="serviços.html" >Serviços</a></li>
+            <li><a href="dicas.html">Dicas</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </header>
+      </div>
+
+
+      <nav class="nav">
+        <ul>
+            <li><a href="home.html">Início</a></li>
+            <li><a href="serviços.html">Serviços</a></li>
+            <li><a href="dicas.html">Dicas</a></li>
+            <li><a href="contato.html" class="active">Contato</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="connect">
+            <h2>Siga-nos nas redes sociais:</h2>
+            <div class="social-links">
+                <a href="https://www.instagram.com/seu_usuario_do_instagram" target="_blank">
+                    <img src="img/inst.png" alt="Instagram">
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=seu_numero_do_whatsapp" target="_blank">
+                    <img src="img/what.png" alt="WhatsApp">
+                </a>
+            </div>
+        </div>
+        <div class="dashboards">
+            <div class="dashboard">
+                <img src="img/qrcodeinst.jpg" alt="Dashboard 1">
+                <h3>@lavanderiacristal_gv</h3>
+                <p>Acesse nosso instagram plo QRcode.</p>
+            </div>
+            <div class="dashboard">
+                <img src="img/qrcodewhatsapp.png" alt="Dashboard 2">
+                <h3>Lavanderia Cristal</h3>
+                <p>Acesse nosso Whatsapp pelo QRcode.</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Todos os direitos reservados &copy; 2023</p>
+    </footer>
+
+    <script>
+        let menuBox = document.getElementById("menuBox")
+        let menuIcon = document.getElementById("menuIcon")
+
+        menuIcon.onclick = function()
+        {
+        menuBox.classList.toggle("open-menu");
+
+        if(menuBox.classList.contains("open-menu"))
+        {
+            menuIcon.src = "img/cancel.png";
+        }
+        else
+        {
+            menuIcon.src = "img/48.png";
+        }
+        }
+     </script>
+</body>
+</html>

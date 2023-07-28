@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Inicial Responsiva</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #ffffff;
+      padding: 20px;
+    }
+
+    .logo {
+      text-align: center;
+    }
+
+    .logo img {
+      max-width: 200px;
+    }
+
+    main {
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #8700a8;
+    }
+
+    p {
+      color: #8700a8;
+    }
+
+    .cristal-text {
+      color: #3dc000; /* Nova cor da palavra "Cristal" */
+    }
+
+    .button {
+      display: inline-block;
+      background-color: #8700a8;
+      color: #ffffff;
+      padding: 10px 20px;
+      text-decoration: none;
+      margin-top: 20px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #620083;
+    }
+  </style>
+</head>
+<body>
+    <header>
+      <div class="logo">
+        <img src="img/logo.png" alt="Logo da Empresa">
+      </div>
+    </header>
+  
+    <main>
+        <h1 id="typed-text">Bem-vindo à Lavanderia<span class="cristal-text" style="color: #3dc000;">CRISTAL</span></h1>
+      <p>Self-Service</p>
+      <a class="button" href="home.html">Iniciar</a>
+    </main>
+  
+    <script>
+       const words = ["Bem Vindo a Lavanderia Cristal", "Bem Vindo a Nossa página WEB", "Confira nossas promoções, preços, dicas de lavagens e muito mais!", "Clique em iniciar!"]; // Adicione as palavras desejadas aqui
+const typedTextElement = document.getElementById('typed-text');
+const typingSpeed = 50; // Velocidade da animação (em milissegundos)
+const pauseBetweenWords = 1500; // Pausa entre as palavras (em milissegundos)
+
+let wordIndex = 0;
+let letterIndex = 0;
+let isDeleting = false;
+
+function type() {
+  const currentWord = words[wordIndex];
+  const text = isDeleting
+    ? currentWord.substring(0, letterIndex - 1)
+    : currentWord.substring(0, letterIndex + 1);
+
+  typedTextElement.innerHTML = text;
+  letterIndex += isDeleting ? -1 : 1;
+
+  if (!isDeleting && letterIndex === currentWord.length) {
+    isDeleting = true;
+    setTimeout(() => {
+      isDeleting = false;
+      wordIndex = (wordIndex + 1) % words.length;
+      letterIndex = 0;
+      setTimeout(type, pauseBetweenWords);
+    }, pauseBetweenWords);
+  } else {
+    setTimeout(type, typingSpeed);
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  setTimeout(type, pauseBetweenWords);
+});
+    </script>
+  </body>
+</html>
