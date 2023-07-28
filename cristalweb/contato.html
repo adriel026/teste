@@ -1,19 +1,30 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conecte-se Conosco</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Layout Inspirado no PS4</title>
     <style>
-        body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-}
+         body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            background-color: #ffffff;
+            /* Definindo o gradiente sobrepondo a imagem de background */
+            /*background-image: linear-gradient(rgba(44, 0, 65, 0.5), rgba(43, 0, 39, 0.5));
+            /* Ajustando a posição e repetição da imagem de background */
+            /*background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            /* Define uma altura mínima para a imagem ocupar a tela inteira */
+            min-height: 100vh;
+        }
 
-.header {
+        
+
+        .header {
             background-color: #ffffff;
             padding: 10px;
             text-align: center;
@@ -132,80 +143,225 @@
         border-radius: 5px;
         }
 
-main {
-    padding: 2rem;
-}
+      /* Estilo para tela menor que 600px usando @media */
+        @media screen and (max-width: 600px) {
+        .jumbotron {
+        /* Ajuste os valores conforme necessário para a exibição responsiva */
+        width: 100%; /* Ocupar toda a largura da tela */
+        height: 100px; /* Redimensionar a altura conforme o conteúdo */
+        padding: 10px 0; /* Reduzir o espaço interno */
+        margin: 0; /* Remover margem esquerda */
+        }
+        }
+       /* Novo estilo para a classe "nav" quando a tela for menor que 600px */
+        @media screen and (max-width: 600px) {
+        nav {
+        display: none; /* Esconde a navegação */
+        }
 
-.connect {
-    text-align: center;
-}
+        #menuIcon {
+        display: block; /* Mostra o ícone de menu */
+        }
+        }
 
-.social-links {
-    margin-top: 1rem;
-}
-
-.social-links a {
-    display: inline-block;
-    margin: 0 10px;
-}
-
-.dashboards {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-top: 2rem;
-}
-
-.dashboard {
-    width: 300px;
-    background-color: #f2f2f2;
-    padding: 1rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.dashboard img {
-    max-width: 100%;
-}
-
-.dashboard h3 {
-    margin-top: 0.5rem;
-}
-
-.dashboard p {
-    font-size: 14px;
-    color: #666;
-}
-
-.dashboard a {
-    display: inline-block;
-    background-color: #007BFF;
-    color: #fff;
-    text-decoration: none;
-    padding: 8px 16px;
-    border-radius: 5px;
-    margin-top: 1rem;
-    transition: background-color 0.3s ease;
-}
-
-.dashboard a:hover {
-    background-color: #0056b3;
-}
+        section {
+        padding: 20px;
+        text-align: center;
+        color: #fff;
+        }
 
 
-footer {
-    text-align: center;
-    padding: 1rem 0;
-    background-color: #333;
-    color: #fff;
-}
+   
+    
+        .jumbotron {
+       /* background-image: url(img/paper.jpg);
+        /*Ajustando a posição e repetição da imagem de background*/
+        /*background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;*/
+        /*width: 1280px;
+        height: 1080;*/
+        padding: 100px 0;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        margin-left: 40px;
+        }
+    
+    
+        .jumbotron h1 {
+        font-size: 48px;
+        margin-bottom: 20px;
+        text-align: left;
+        color: #9600bb;
+        }
+    
+        .jumbotron p {
+        font-size: 24px;
+        margin-bottom: 40px;
+        text-align: left;
+        color: #9600bb;
+        }
+    
+        .cta-button {
+         background-color: #9600bb;
+        color: #fff;
+        width: 100px;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 18px;
+        text-decoration: none;
+        transition: background-color 0.3s;
+        transition: transform 0.3s;
+        }
+    
+        .cta-button:hover {
+        background-color: #be00ee;
+        transform: scale(1.50);
+        }
 
-    </style>
-</head>
-<body>
-    <header class="header">
+        .section1 {
+            padding: 10px;
+            margin:1px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .section2 {
+            padding: 10px;
+            margin:1px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .game-window-larguer {
+            width: 350px;
+            height: 350px;
+            background-color: #9600bb;
+            border: 2px solid #fff;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .game-window-larguer img {
+            max-width: 350px;
+            max-height: 350px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+
+        .game-window-larguer-2 {
+            width: 350px;
+            height: 150px;
+            background-color: #ffffff;
+            border: 2px solid #8c00a8;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .game-window-larguer-2 img {
+            max-width: 350px;
+            max-height: 150px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .game-window {
+            width: 150px;
+            height: 150px;
+            background-color: #9600bb;
+            border: 2px solid #fff;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-self: flex-end;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .game-window img {
+            max-width: 150px;
+            max-height: 150px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .game-window-2 {
+            width: 350px;
+            height: 130px;
+            background-color: #77E100;
+            border-color:#8700a8;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 0px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .game-window-2 img {
+            max-width: 300px;
+            max-height: 150px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .game-window-larguer:hover {
+         transform: scale(1.02);
+        }
+        .game-window-larguer-2:hover {
+         transform: scale(1.02);
+        }
+        .game-window:hover {
+         transform: scale(1.10);
+        }
+        .game-window-2:hover {
+         transform: scale(1.10);
+        }
+        
+        .section2 {
+            padding: 10px;
+            margin:1px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+    
+        .youtube-player {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    
+
+        
+        </style>
+        </head>
+
+        <body>
+        <header class="header">
         <img class="logo" src="img/logo.png" alt="Logo">
         <img src="img/48.png" id="menuIcon">
         <div class="menu-box" id="menuBox">
@@ -219,45 +375,125 @@ footer {
         </header>
       </div>
 
-
+     
+ 
+    
       <nav class="nav">
         <ul>
             <li><a href="home.html">Início</a></li>
             <li><a href="serviços.html">Serviços</a></li>
-            <li><a href="dicas.html">Dicas</a></li>
-            <li><a href="contato.html" class="active">Contato</a></li>
+            <li><a href="dicas.html" class="active">Dicas</a></li>
+            <li><a href="contato.html">Contato</a></li>
         </ul>
     </nav>
-    <main>
-        <div class="connect">
-            <h2>Siga-nos nas redes sociais:</h2>
-            <div class="social-links">
-                <a href="https://www.instagram.com/seu_usuario_do_instagram" target="_blank">
-                    <img src="img/inst.png" alt="Instagram">
-                </a>
-                <a href="https://api.whatsapp.com/send?phone=seu_numero_do_whatsapp" target="_blank">
-                    <img src="img/what.png" alt="WhatsApp">
-                </a>
-            </div>
-        </div>
-        <div class="dashboards">
-            <div class="dashboard">
-                <img src="img/qrcodeinst.jpg" alt="Dashboard 1">
-                <h3>@lavanderiacristal_gv</h3>
-                <p>Acesse nosso instagram plo QRcode.</p>
-            </div>
-            <div class="dashboard">
-                <img src="img/qrcodewhatsapp.png" alt="Dashboard 2">
-                <h3>Lavanderia Cristal</h3>
-                <p>Acesse nosso Whatsapp pelo QRcode.</p>
-            </div>
-        </div>
-    </main>
-    <footer>
-        <p>Todos os direitos reservados &copy; 2023</p>
-    </footer>
+    
 
-    <script>
+      <section>
+        <div class="jumbotron">
+            <img class="logo" src="" alt="">
+          <h1>Dicas</h1>
+          <p>Para uma lavagem mais <br><strong style="color:#5ac700">EFICIENTE</strong><br></p>
+        </div>
+      </section>
+
+      <section class="section2">
+
+        <div class="game-window-2">
+            <h1 id="typed-text"></h1>
+        </div>
+       
+        
+        </section>
+
+
+        <section class="section3">
+            <div class="youtube-player">
+                <iframe width="420" height="315" src="https://www.youtube.com/embed/VIDEO_ID_HERE" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </section>
+
+          <!--<section class="section3">
+            <div class="youtube-window">
+                <input type="text" id="youtube-link" placeholder="Enter YouTube video link">
+                <button onclick="playVideo()">Play Video</button>
+            </div>
+            <div class="youtube-player">
+                <!-- The YouTube video player will be added dynamically here
+            </div>
+        </section>-->
+
+
+        <footer>
+            &copy; Lavanderia Cristal2023. Todos os direitos reservados.
+        </footer>
+        </body>
+
+        <script>
+            const words = ["#1 - Meça as roupas no Cesto medidas!", "#2 - Adicione as roupas na máquina escolhida!", "#3 - Realize o pagamento no Totem", "#4 - Clique em iniciar a lavagem!","#5 - Aguarde o processo de lavagem", "Repita o procedimento para secagem"]; // Adicione as palavras desejadas aqui
+     const typedTextElement = document.getElementById('typed-text');
+     const typingSpeed = 50; // Velocidade da animação (em milissegundos)
+     const pauseBetweenWords = 2500; // Pausa entre as palavras (em milissegundos)
+     
+     let wordIndex = 0;
+     let letterIndex = 0;
+     let isDeleting = false;
+     
+     function type() {
+       const currentWord = words[wordIndex];
+       const text = isDeleting
+         ? currentWord.substring(0, letterIndex - 1)
+         : currentWord.substring(0, letterIndex + 1);
+     
+       typedTextElement.innerHTML = text;
+       letterIndex += isDeleting ? -1 : 1;
+     
+       if (!isDeleting && letterIndex === currentWord.length) {
+         isDeleting = true;
+         setTimeout(() => {
+           isDeleting = false;
+           wordIndex = (wordIndex + 1) % words.length;
+           letterIndex = 0;
+           setTimeout(type, pauseBetweenWords);
+         }, pauseBetweenWords);
+       } else {
+         setTimeout(type, typingSpeed);
+       }
+     }
+     
+     document.addEventListener('DOMContentLoaded', () => {
+       setTimeout(type, pauseBetweenWords);
+     });
+         </script>
+
+        <script>
+            function playVideo() {
+                const youtubeLink = document.getElementById("youtube-link").value;
+                const videoId = getVideoIdFromLink(youtubeLink);
+        
+                if (videoId) {
+                    const youtubePlayer = document.createElement("iframe");
+                    youtubePlayer.setAttribute("width", "100%");
+                    youtubePlayer.setAttribute("height", "500");
+                    youtubePlayer.setAttribute("src", `https://www.youtube.com/embed/${videoId}`);
+                    youtubePlayer.setAttribute("frameborder", "0");
+                    youtubePlayer.setAttribute("allowfullscreen", "true");
+        
+                    const youtubePlayerContainer = document.querySelector(".youtube-player");
+                    youtubePlayerContainer.innerHTML = "";
+                    youtubePlayerContainer.appendChild(youtubePlayer);
+                } else {
+                    alert("Invalid YouTube video link!");
+                }
+            }
+        
+            function getVideoIdFromLink(link) {
+                const regex = /(?:https?:\/\/(?:www\.)?youtube\.com\/watch\?v=|https?:\/\/youtu\.be\/)([a-zA-Z0-9_-]{11})/;
+                const match = link.match(regex);
+                return match ? match[1] : null;
+            }
+        </script>
+
+        <script>
         let menuBox = document.getElementById("menuBox")
         let menuIcon = document.getElementById("menuIcon")
 
@@ -275,5 +511,5 @@ footer {
         }
         }
      </script>
-</body>
+
 </html>
